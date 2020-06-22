@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render correctly 1`] = `
+exports[`should show correct numbers 1`] = `
 <section
   className="welcome"
 >
@@ -38,12 +38,12 @@ exports[`should render correctly 1`] = `
   >
     <li>
       За 
-      10
+      7
        минут нужно ответить на все вопросы.
     </li>
     <li>
       Можно допустить 
-      2
+      4
        ошибки.
     </li>
   </ul>
