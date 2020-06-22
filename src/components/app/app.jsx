@@ -4,7 +4,7 @@ import WelcomeScreen from "../welcome-screen/welcome-screen.jsx";
 // eslint-disable-next-line react/prop-types
 const App = ({gameTime, errorCount}) => {
 
-  return <WelcomeScreen time={gameTime} errorCount={errorCount} />;
+  return <WelcomeScreen gameTime={gameTime} errorCount={errorCount} />;
 
 };
 
