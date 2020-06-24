@@ -7,16 +7,16 @@ Enzyme.configure({
   adapter: new Adapter()
 });
 
-it(`should register a click on button`, () => {
-  const onWelcomeButton = jest.fn();
+it(`should welcome button be pressed`, () => {
+  const onWelcomeButtonClick = jest.fn();
 
   const welcomeScreen = shallow(
-      <WelcomeScreen gameTime={7} errorCount={4} onClick={onWelcomeButton}/>
+      <WelcomeScreen gameTime={7} errorCount={3} onWelcomeButtonClick={onWelcomeButtonClick}/>
   );
 
   const welcomeButton = welcomeScreen.find(`button.welcome__button`);
 
-  welcomeButton.simulate(`click`);
+  welcomeButton.props().onClick();
 
-  expect(onWelcomeButton).toBeCalled();
+  expect(onWelcomeButtonClick.mock.calls.length).toBe(1);
 });

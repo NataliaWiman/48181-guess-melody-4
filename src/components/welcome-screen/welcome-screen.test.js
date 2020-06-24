@@ -3,7 +3,13 @@ import renderer from 'react-test-renderer';
 import WelcomeScreen from '../welcome-screen/welcome-screen.jsx';
 
 it(`should show correct numbers`, () => {
-  const tree = renderer.create(<WelcomeScreen gameTime={7} errorCount={4}/>).toJSON();
+  const tree = renderer
+    .create(<WelcomeScreen
+      gameTime={7}
+      errorCount={4}
+      onWelcomeButtonClick={() => {}}
+    />)
+      .toJSON();
 
   expect(tree).toMatchSnapshot();
 });
